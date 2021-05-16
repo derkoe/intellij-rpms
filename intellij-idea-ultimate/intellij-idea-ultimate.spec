@@ -1,6 +1,7 @@
 %define source_name idea-IU
 %define install_path /opt/jetbrains/idea-iu
 %define build_number 211.7142.45
+%undefine __brp_mangle_shebangs
 
 Name:          intellij-idea-ultimate
 Version:       2021.1.1
@@ -25,4 +26,5 @@ The most intelligent JVM IDE
 %__ln_s %{buildroot}%{install_path}/bin/idea.sh %{buildroot}%{_bindir}/idea
 
 %files
-%{install_path}/*
+%{_bindir}/idea
+%{install_path}/*%{_bindir}/idea
