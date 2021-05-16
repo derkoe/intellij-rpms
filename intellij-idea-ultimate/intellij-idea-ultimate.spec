@@ -26,7 +26,7 @@ The most intelligent JVM IDE
 %__mkdir -p %{buildroot}%{install_path}
 %__mkdir -p %{buildroot}%{_bindir}
 %__cp -r %{_builddir}/%{source_name}-%{build_number}/* %{buildroot}%{install_path}
-%__ln_s %{buildroot}%{install_path}/bin/idea.sh %{buildroot}%{_bindir}/idea
+%__ln_s %{install_path}/bin/idea.sh %{buildroot}%{_bindir}/idea
 
 # Remove empty cacerts database
 rm -f %{buildroot}%{install_path}/jbr/lib/security/cacerts
